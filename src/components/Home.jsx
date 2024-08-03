@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Home = () => {
   return (
     <>
@@ -21,30 +22,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-center h-screen">
-        <div className="h-4/6 flex flex-col justify-around items-center bg-blue-500">
-          <h1 className="font-extrabold antialiased font-dm text-4xl">
-            Awesome Exercises You Should Know
-          </h1>
-          <div className="rounded-md border-2 w-5/6 flex ">
-            <input
-              className="outline-none border-2 h-10 grow"
-              type="text"
-              placeholder="Search Exercises"
-            />
-            <button className="grow">Search</button>
-          </div>
-          <div>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div>Arrows</div>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 };

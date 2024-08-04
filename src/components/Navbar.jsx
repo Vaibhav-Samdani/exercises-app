@@ -4,7 +4,7 @@ import Logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="z-10 bg-slate-950 text-white font-poppins fixed container flex items-center h-20 bg-transparent ">
+    <nav className="z-10 bg-slate-950 text-white font-poppins fixed container flex items-center h-20 ">
       <Link className=" w-40 ml-2 my-auto" to={"/"}>
         <img src={Logo} className="ml-4 "  alt="Fitness Sign" />
       </Link>

@@ -10,7 +10,7 @@ const Home = () => {
             <h1 className="font-extrabold antialiased font-dm text-4xl">
               Fitness Club
             </h1>
-            <h3 className="font-poppins text-xl font-medium ">
+            <h3 className="font-poppins text-left text-xl font-medium ">
               Sweet, Smile And Repeat
             </h3>
             <a

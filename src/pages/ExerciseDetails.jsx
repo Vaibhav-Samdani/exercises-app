@@ -17,19 +17,18 @@ const ExerciseDetails = () => {
   }, [id]);
 
   return (
-    <section id="exercises" className=" min-h-screen w-screen">
-      <h1>a</h1>
+    <section id="exercises" className="pt-28 min-h-screen w-screen">
       {
-        <div className="mt-28 h-full min-w-full flex justify-center items-center flex-col">
+        <div className=" h-full min-w-full flex justify-center items-center flex-col">
           <h1 className="font-dm font-bold text-4xl" style={{textTransform:'capitalize'}}>{data.name}</h1>
           <img src={data.gifUrl} width={300} alt="" />
-          <button className="rounded-md bg-red-600 text-white min-w-16 font-poppins m-1">
+          <button style={{textTransform:'capitalize'}} className="rounded-md bg-red-600 text-white min-w-16 font-poppins m-1">
             {data.bodyPart}
           </button>
-          <button className="rounded-md bg-red-600 text-white min-w-16 font-poppins m-1">
+          <button style={{textTransform:'capitalize'}} className="rounded-md bg-red-600 text-white min-w-16 font-poppins m-1">
             {data.target}
           </button>
-          <button className="rounded-md bg-green-800 text-white min-w-36 font-poppins ">
+          <button style={{textTransform:'capitalize'}} className="rounded-md bg-green-800 text-white min-w-36 font-poppins ">
             {data.secondaryMuscles?.map((ele) => (
               <li className="m-1" style={{ listStyle: "none" }}>
                 {ele}
@@ -44,7 +43,7 @@ const ExerciseDetails = () => {
             ))}
           </ol>
 
-          <h1 className="font-dm font-medium text-blue-900 bg-amber-500 p-2 rounded-md">
+          <h1 style={{textTransform:'capitalize'}} className="mb-10 font-dm font-medium text-gray-900 bg-amber-500 p-2 rounded-md">
             Equipment : {data.equipment}
           </h1>
         </div>

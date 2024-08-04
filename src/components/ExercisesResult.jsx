@@ -7,7 +7,13 @@ const ExercisesResult = () => {
   const [page, setPage] = useState(1)
 
   const getData = async () => {
-    fetchData(url, exerciseOptions).then((ele) => setData(ele));
+    try {
+      fetchData(url, exerciseOptions).then((ele) => setData(ele));
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
   };
 
   const url = `https://exercisedb.p.rapidapi.com/exercises?limit=20&offset=${page}`;
@@ -15,6 +21,7 @@ const ExercisesResult = () => {
     getData();
   }, [page]);
   console.log(data);
+  
 
   return (
     <section className="min-h-screen flex justify-center items-center">

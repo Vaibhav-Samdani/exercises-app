@@ -18,7 +18,7 @@ const ExercisesResult = () => {
 
   const url = `https://exercisedb.p.rapidapi.com/exercises?limit=20&offset=${page}`;
   useEffect(() => {
-    getData();
+    // getData();
   }, [page]);
   console.log(data);
   

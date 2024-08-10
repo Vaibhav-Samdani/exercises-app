@@ -4,7 +4,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <section className="h-screen bg-blue-600 bg-fitness-home bg-center bg-cover bg-no-repeat flex justify-center md:justify-normal text-white">
+      <section className="h-screen bg-slate-900 bg-fitness-home bg-center bg-cover bg-no-repeat flex justify-center md:justify-normal text-white">
         <div className="w-full md:w-6/12 h-full flex justify-center items-center flex-col">
           <div className=" flex justify-around  flex-col items-start w-4/6 h-1/5 ">
             <h1 className="font-extrabold antialiased font-dm text-4xl">

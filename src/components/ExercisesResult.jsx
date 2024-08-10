@@ -16,12 +16,12 @@ const ExercisesResult = () => {
 
   const url = `https://exercisedb.p.rapidapi.com/exercises?limit=5&offset=${page}`;
   useEffect(() => {
-    // getData();
+    getData();
   }, [page]);
   console.log(data);
 
   return (
-    <section className="min-h-screen flex justify-center items-center">
+    <section id="exercises" className="min-h-screen flex justify-center items-center">
       <div className="mt-20 min-h-4/5 w-5/6">
         <h1 className="font-extrabold antialiased font-dm text-4xl">
           Showing Results

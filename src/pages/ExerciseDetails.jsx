@@ -16,15 +16,6 @@ const ExerciseDetails = () => {
   useEffect(() => {
     setLoading(true);
     getData();
-    // setData({
-    //   name: "name",
-    //   bodyPart: "bodyPart",
-    //   target: "target",
-    //   secondaryMuscles: ["secondaryMuscles"],
-    //   equipment: "equipment",
-    //   instructions: ["instructions"],
-    //   gifUrl: "https://dummyimage.com/600x600/fcb3fc/000000.gif&text=Vaibhav+Samdani"
-    // })
     setLoading(false);
   }, [id]);
 

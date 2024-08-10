@@ -5,16 +5,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 const ExerciseDetails = () => {
   const { id } = useParams();
 
-  const [data, setData] = useState({
-    name: "vaibhav",
-    gifUrl:
-      "https://dummyimage.com/600x600/fcb3fc/000000.gif&text=Vaibhav+Samdani",
-    bodyPart: "hand",
-    target: "muscle",
-    secondaryMuscles: ["one", "two"],
-    instructions: ["THis is line one", "This is line two"],
-    equipment: "exercise equipment",
-  });
+  const [data, setData] = useState({});
 
   const getData = async () => {
     fetchData(url, exerciseOptions).then((ele) => setData(ele));
@@ -42,7 +33,7 @@ const ExerciseDetails = () => {
     >
       {
         <>
-          <div className=" min-h-full min-w-full md:w-3/6 flex justify-start md:pt-28 gap-7 items-start pl-16 md:pl-40 flex-col">
+          <div className=" min-h-full w-full md:w-3/6 flex justify-start md:pt-28 gap-7 items-start pl-10 pr-10 md:pl-40 flex-col">
             <h1
               className="text-white font-dm font-bold text-4xl"
               style={{ textTransform: "capitalize" }}
@@ -83,17 +74,14 @@ const ExerciseDetails = () => {
             </h1>
             <ul className="rounded-md mt-3 flex flex-col gap-2 text-left w-25 font-poppins text-white">
               {data.instructions?.map((ele) => (
-                <li
-                  className=" list-inside list-decimal"
-                  key={ele.id}
-                >
+                <li className=" list-inside list-decimal" key={ele.id}>
                   {ele}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="min-h-full w-full md:w-3/6 flex justify-center items-center md:items-start md:pr-20 pt-24">
+          <div className="min-h-full w-full md:w-3/6 flex justify-center items-center md:items-start md:pr-20 pt-24 ">
             <img src={data.gifUrl} width={350} alt="" />
           </div>
         </>

@@ -6,6 +6,7 @@ const ExerciseDetails = () => {
   const { id } = useParams();
 
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState();
 
   const getData = async () => {
     fetchData(url, exerciseOptions).then((ele) => setData(ele));
@@ -13,18 +14,27 @@ const ExerciseDetails = () => {
 
   const url = `https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`;
   useEffect(() => {
-    // getData();
-    setData({
-      name: "Exercise-Name",
-      gifUrl:
-        "https://dummyimage.com/600x600/fcb3fc/000000.gif&text=Vaibhav+Samdani",
-      bodyPart: "bodyPart",
-      target: "target",
-      secondaryMuscles: ["MusclesOne", "MusclesTwo"],
-      instructions: ["THis is instruction one", "This is instruction two"],
-      equipment: "exercise equipment",
-    });
+    setLoading(true);
+    getData();
+    // setData({
+    //   name: "name",
+    //   bodyPart: "bodyPart",
+    //   target: "target",
+    //   secondaryMuscles: ["secondaryMuscles"],
+    //   equipment: "equipment",
+    //   instructions: ["instructions"],
+    //   gifUrl: "https://dummyimage.com/600x600/fcb3fc/000000.gif&text=Vaibhav+Samdani"
+    // })
+    setLoading(false);
   }, [id]);
+
+  if (loading) {
+    return (
+      <>
+        <h1 className="mt-20">Loading ...</h1>
+      </>
+    );
+  }
 
   return (
     <section
@@ -33,9 +43,9 @@ const ExerciseDetails = () => {
     >
       {
         <>
-          <div className=" min-h-full w-full md:w-3/6 flex justify-start md:pt-28 gap-7 items-start pl-10 pr-10 md:pl-40 flex-col">
+          <div className="text-left min-h-full w-full md:w-3/6 flex justify-start md:pt-28 gap-7 items-start pl-10 pr-10 md:pl-40 flex-col">
             <h1
-              className="text-white font-dm font-bold text-4xl"
+              className="text-white text-left font-dm font-bold text-4xl"
               style={{ textTransform: "capitalize" }}
             >
               {data.name}
@@ -81,7 +91,7 @@ const ExerciseDetails = () => {
             </ul>
           </div>
 
-          <div className="min-h-full w-full md:w-3/6 flex justify-center items-center md:items-start md:pr-20 pt-24 ">
+          <div className="min-h-full w-full md:w-3/6 flex justify-center items-center md:items-start md:pr-20 pt-24 mb-20 ">
             <img src={data.gifUrl} width={350} alt="" />
           </div>
         </>

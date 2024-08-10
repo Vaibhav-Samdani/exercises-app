@@ -1,6 +1,5 @@
 import React from "react";
 import gym from "../assets/gym.svg";
-import ExercisesResult from "./ExercisesResult";
 const Exercises = () => {
   return (
     <>

@@ -30,7 +30,7 @@ const ExerciseDetails = () => {
   return (
     <section
       id="exercises"
-      className="pt-28 min-h-screen min-w-screen flex flex-col md:flex-row bg-slate-900"
+      className="pt-28 md:pt-0 min-h-screen min-w-screen flex flex-col md:flex-row bg-slate-900"
     >
       {
         <>

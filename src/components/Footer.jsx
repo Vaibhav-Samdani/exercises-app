@@ -6,9 +6,9 @@ import github from "../assets/github.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 h-96 w-full flex flex-col">
+    <footer className="bg-gray-800 h-72 w-full flex flex-col">
       <div className="flex flex-col justify-around h-4/5">
-        <h1 className="mt-20 font-dm font-semibold text-white text-3xl">
+        <h1 className="mt-10 font-dm font-semibold text-white text-3xl">
           Vaibhav Samdani
         </h1>
         <div className="h-2/6 flex justify-center items-center">
@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bg-blue-950 h-1/5 text-white font-poppins flex flex-col items-center justify-center text-sm p-4 md:text-base"><span>Copyright ©2024 Vaibhav Samdani.</span> <span> Made With ❤ in India</span></div>
+      <div className="bg-blue-950 h-2/6 text-white font-poppins flex flex-col items-center justify-center text-sm p-4 md:text-base"><span>Copyright ©2024 Vaibhav Samdani.</span> <span> Made With ❤ in India</span></div>
     </footer>
   );
 };
